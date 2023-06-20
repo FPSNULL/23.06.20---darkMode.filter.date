@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>P3 - Gabriel de Almeida Moraes</title>
+</head>
+<body>
+    <main id="conteiner">
+        <header id="header">
+            <img src="midia/herta.gif" alt="herta">
+            
+            <div class="theme_mode">
+                <input type="checkbox" class="checkbox" id="chk"/>
+            
+                <label for="chk" class="label" id="label_theme">
+                    <i class="fas fa-moon" id="moon"></i>
+                    <div class="ball" id="ball_theme"></div>
+                </label>
+            </div>
+        </header>
+        
+        <div class="conteiners_main">
+            <div id="conteiner_form">
+                <form id="pessoas_form">
+                    <div id="header_form">
+                        <p id="saudacao"></p>
+                    </div>
+        
+                    <div id="inputs_form">
+                        <div class="input_box">
+                            <label for="nome">
+                                Name
+                                <div class="input_field">
+                                    <i class="fa-solid fa-user" id="icon_nome"></i>
+                                    <input type="text" name="nome" id="nome" onblur="mascaraNome(this)"></label>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="input_box">
+                            <label for="cpf">
+                                CPF
+                                <div class="input_field">
+                                    <i class="fa-solid fa-fingerprint" id="icon_cpf"></i>
+                                    <input type="text" name="cpf" id="cpf" onblur="mascaraCPF(this)">
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+    
+                    <input type="button" value="Send" id="input_submit_form" onclick="return validar()">
+                </form>
+            </div>
+            
+            <div id="conteiner_filter">
+                <div class="input_filter">
+                    <i class="fa-solid fa-magnifying-glass" id="icon_filter"></i>
+                    <input type="text" id="campoFiltro" placeholder="Nome" oninput="filtrar()"> 
+                </div>
+                  
+    
+                <ul id="listaPessoas"></ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
